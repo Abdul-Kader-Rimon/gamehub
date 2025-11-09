@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknown's Battle Ground: PUBG",
+    "coverPhoto": "https://i.ibb.co.com/Mxt7Yjpv/unnamed.png",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://i.ibb.co.com/dw6VNbpG/App-Icon-CODM-Global.webp",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty: Mobile brings console-quality action to your phone with multiple game modes including Battle Royale and Multiplayer.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co.com/DgS1gMcD/images-2.jpg",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact is an open-world action RPG where players explore Teyvat, harness elemental powers, and uncover mysteries.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "4",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://i.ibb.co.com/W4X5Hy4N/unnamed-1.png",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Build your village, train troops, and clash with players around the world in this iconic strategic mobile game.",
+    "ratings": "4.3",
+    "developer": "Supercell"
+  },
+  {
+    "id": "5",
+    "title": "Among Us",
+    "coverPhoto": "https://i.ibb.co.com/PGyh49rC/unnamed.jpg",
+    "category": "Party",
+    "downloadLink": "https://innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a multiplayer game of teamwork and betrayal. Work together to keep your ship running—or sabotage it!",
+    "ratings": "4.2",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "6",
+    "title": "Free Fire",
+    "coverPhoto": "https://i.ibb.co.com/yFzdrcGY/images-3.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire is a survival shooter game set on a remote island where players fight to be the last one standing.",
+    "ratings": "4.4",
+    "developer": "Garena"
+  },
+  {
+    "id": "7",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co.com/Hf00N31t/images-4.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft lets players build and explore infinite worlds made of blocks, crafting anything they can imagine.",
+    "ratings": "4.8",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "8",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://example.com/images/asphalt9.png",
+    "category": "Racing",
+    "downloadLink": "https://www.gameloft.com/game/asphalt-9-legends",
+    "description": "Asphalt 9 is a high-octane racing game featuring real cars, stunning graphics, and intense arcade-style gameplay.",
+    "ratings": "4.5",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "9",
+    "title": "Mobile Legends: Bang Bang",
+    "coverPhoto": "https://i.ibb.co.com/k6sg2jCX/unnamed-2.png",
+    "category": "MOBA",
+    "downloadLink": "https://m.mobilelegends.com/",
+    "description": "Mobile Legends is a 5v5 MOBA game where players engage in strategic battles with heroes and teamwork.",
+    "ratings": "4.3",
+    "developer": "Moonton"
+  },
+  {
+    "id": "10",
+    "title": "Valorant",
+    "coverPhoto": "https://i.ibb.co.com/nsvj1rM0/images-1.png",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "Valorant is a tactical first-person shooter combining precise gunplay with unique agent abilities.",
+    "ratings": "4.6",
+    "developer": "Riot Games"
+  }
+]
