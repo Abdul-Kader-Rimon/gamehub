@@ -50,13 +50,12 @@ const Navbar = () => {
               </li>
             </ul>
 
-            {/* <button className="bg-purple-500 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">
-              <Link to={"/signin"}>Sign in</Link>
-            </button> */}
+             
 
             {loading? (<HashLoader color="#f22693" />) : user ? (
-              <div className="text-center  space-y-3">
-                
+              <div className="text-center flex items-center gap-4   space-y-3">
+                <div className='mt-3'>
+                   <MyLink to={"/my-profile"}>
                 <button
                   className=" rounded-full  "
                   popoverTarget="popover-1"
@@ -66,28 +65,21 @@ const Navbar = () => {
                 >
                   <img
                     src={user?.photoURL || "https://via.placeholder.com/88"}
-                    className="h-[40px] w-[40px] rounded-full mx-auto"
+                    className="h-[50px] w-[50px] rounded-full mx-auto"
                     alt=""
                   />
-                  {/* {user.displayName} */}
                 </button>
-
-                <div
-                  className="space-y-1 dropdown menu w-52  rounded-box bg-base-100 shadow-sm -ml-20"
-                  popover="auto"
-                  id="popover-1"
-                  style={
-                    {
-                      positionAnchor: "--anchor-1",
-                    }  
-                  }
-                >
-                  <h2 className="text-xl font-semibold">{user?.displayName}</h2>
-                  <p className="text-black">{user?.email}</p>
-                  <button onClick={handleSignout} className="my-btn">
-                    Sign Out
-                  </button>
+                </MyLink>
                 </div>
+               
+                <div>
+                   <button onClick={handleSignout} className="my-btn">
+                    Sign Out
+                </button>
+                </div>
+               
+
+                 
               </div>
             ) : (
               <Link to={"/signin"}>
