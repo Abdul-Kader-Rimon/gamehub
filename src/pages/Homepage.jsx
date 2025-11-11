@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import PopularGames from './PopularGames';
 import MyContainer from '../components/MyContainer';
 import Banner from './Banner';
+import Newsletter from './Newsletter';
 
 const Homepage = () => {
     const games = useLoaderData();
@@ -14,6 +15,7 @@ const Homepage = () => {
           <Banner games={games} />
 
           <PopularGames games={games} />
+          <Newsletter/>
         </MyContainer>
       </div>
     );
