@@ -2,25 +2,19 @@ import React from 'react';
 import { useLoaderData } from 'react-router';
 import PopularGames from './PopularGames';
 import MyContainer from '../components/MyContainer';
+import Banner from './Banner';
 
 const Homepage = () => {
-    const data = useLoaderData();
+    const games = useLoaderData();
 
-    console.log(data)
+    console.log(games);
     return (
-        <div>
-            <MyContainer>
-                  {/* {data.map((game) => (
-          <div key={game.id}>
-            <h3>{game.title}</h3>
-            <img src={game.coverPhoto} alt={game.title} />
-          </div>
-        ))} */}
-            
+      <div>
+        <MyContainer>
+          <Banner games={games} />
 
-            <PopularGames games={data} />
-            </MyContainer>
-      
+          <PopularGames games={games} />
+        </MyContainer>
       </div>
     );
 };

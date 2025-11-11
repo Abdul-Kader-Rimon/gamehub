@@ -16,7 +16,7 @@ const PopularGames = ({ games }) => {
       <h2 className="text-center font-bold mb-6 text-3xl">Popular Games</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {popularGames.map((game) => (
-          <div className=" card bg-base-100   shadow-sm hover:scale-105 transition ease-in-out rounded-xl">
+          <div key={game.id} className=" card bg-base-100   shadow-sm hover:scale-105 transition ease-in-out rounded-xl">
             <img src={game.coverPhoto} alt={game.title} />
 
             <div className="card-body flex flex-col flex-1">
