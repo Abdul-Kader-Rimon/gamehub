@@ -8,6 +8,9 @@ import Signin from "../pages/Signin";
 import PrivetRoute from "../privateRoute/PrivetRoute";
 import MyProfile from "../pages/MyProfile";
 import UpdateProfile from "../pages/UpdateProfile";
+import GameDetails from "../pages/GameDetails";
+import OurTeam from "../pages/OurTeam";
+import OurMission from "../pages/OurMission";
 
 
 
@@ -19,11 +22,21 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
-        loader: () => fetch("/game.json")
+        loader: () => fetch("/game.json"),
       },
       {
         path: "/about-us",
         element: <AboutUs />,
+        children: [
+          {
+            path: "our-team",
+            element: <OurTeam/>
+          },
+          {
+            path: "our-mission",
+            element: <OurMission/>
+          },
+        ]
       },
       {
         path: "/games",
@@ -32,6 +45,7 @@ export const router = createBrowserRouter([
             <Games />
           </PrivetRoute>
         ),
+        loader: () => fetch("/game.json")
       },
       {
         path: "/signup",
@@ -53,9 +67,18 @@ export const router = createBrowserRouter([
         path: "/update-profile",
         element: (
           <PrivetRoute>
-            <UpdateProfile/>
+            <UpdateProfile />
           </PrivetRoute>
         ),
+      },
+      {
+        path: "/games/:id",
+        element: (
+          <PrivetRoute>
+            <GameDetails />
+          </PrivetRoute>
+        ),
+        loader: () => fetch("/game.json"),
       },
     ],
   },

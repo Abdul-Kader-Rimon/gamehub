@@ -6,7 +6,7 @@ import { RiStarSFill } from "react-icons/ri";
 import { useNavigate } from "react-router";
 
 const PopularGames = ({ games }) => {
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const popularGames = [...games]
     .sort((a, b) => b.bratings - a.ratings)
@@ -16,7 +16,7 @@ const PopularGames = ({ games }) => {
       <h2 className="text-center font-bold mb-6 text-3xl">Popular Games</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {popularGames.map((game) => (
-          <div key={game.id} className=" card bg-base-100   shadow-sm hover:scale-105 transition ease-in-out rounded-xl">
+          <div onClick={()=> navigate(`/games/${game.id}`)} key={game.id} className=" card bg-base-100   shadow-sm hover:scale-105 transition ease-in-out rounded-xl">
             <img src={game.coverPhoto} alt={game.title} />
 
             <div className="card-body flex flex-col flex-1">
