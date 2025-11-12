@@ -98,7 +98,16 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-3">
+            {user && (
+              <MyLink to={"/my-profile"} onClick={() => setMenuOpen(false)}>
+                <img
+                  src={user?.photoURL || "https://via.placeholder.com/88"}
+                  className="h-[50px] w-[50px] rounded-full mx-auto"
+                  alt=""
+                />
+              </MyLink>
+            )}
             <button onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
             </button>
@@ -125,36 +134,29 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="mt-4 flex flex-col gap-3">
-            {loading ? (
-              <HashLoader color="#f22693" />
-            ) : user ? (
-              <>
-                <MyLink to={"/my-profile"} onClick={() => setMenuOpen(false)}>
-                  <img
-                    src={user?.photoURL || "https://via.placeholder.com/88"}
-                    className="h-[50px] w-[50px] rounded-full mx-auto"
-                    alt=""
-                  />
-                </MyLink>
-                <button onClick={handleSignout} className="my-btn w-full">
-                  Sign Out
-                </button>
-              </>
-            ) : (
-              <>
-                <Link to={"/signin"} onClick={() => setMenuOpen(false)}>
-                  <button className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold w-full">
-                    Log in
+              {loading ? (
+                <HashLoader color="#f22693" />
+              ) : user ? (
+                <>
+                  <button onClick={handleSignout} className="my-btn w-full">
+                    Sign Out
                   </button>
-                </Link>
-                <Link to={"/signup"} onClick={() => setMenuOpen(false)}>
-                  <button className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold w-full">
-                    Registration
-                  </button>
-                </Link>
-              </>
-            )}
-          </div>
+                </>
+              ) : (
+                <>
+                  <Link to={"/signin"} onClick={() => setMenuOpen(false)}>
+                    <button className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold w-full">
+                      Log in
+                    </button>
+                  </Link>
+                  <Link to={"/signup"} onClick={() => setMenuOpen(false)}>
+                    <button className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold w-full">
+                      Registration
+                    </button>
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
         )}
       </div>

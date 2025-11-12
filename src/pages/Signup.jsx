@@ -5,12 +5,7 @@ import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 
 import MyContainer from "../components/MyContainer";
-import {
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-  updateProfile,
-} from "firebase/auth";
-import { auth } from "../firebase/firebase.config";
+ 
 import { toast } from "react-toastify";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthContext";

@@ -3,8 +3,6 @@ import MyContainer from "../components/MyContainer";
 import { useContext, useEffect, useRef, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
-// import { GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-// import { auth } from "../firebase/firebase.config";
 import { toast } from "react-toastify";
 import { AuthContext } from "../Provider/AuthContext";
 import { Helmet } from "react-helmet-async";
@@ -29,11 +27,7 @@ const Signin = () => {
   const from = location.state?.from?.pathname || "/";
   const emailRef = useRef(null)
   
-
-  // if (user) {
-  //   navigate("/");
-  //   return;
-  // }
+ 
 
   useEffect(() => {
     if (user) {
@@ -94,27 +88,14 @@ const Signin = () => {
   };
 
 
-
-  // const handleForgetPassword = () => {
-  //   const email = emailRef.current.value;
-  //   sendPassResetEmailFunc(email)
-  //     .then((res) => {
-  //       setLoading(false);
-  //       toast.success("Check your email to reset password");
-  //     })
-  //     .catch((error) => {
-  //       toast.error(error.message);
-  //     });
-  // };
-
-  // console.log();
+ 
 
   return (
     <div className="min-h-[calc(100vh-20px)] flex items-center justify-center bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 relative overflow-hidden">
       <Helmet>
         <title>Sign in - GemeHub</title>
       </Helmet>
-      {/* Animated glow orbs */}
+       
       <div className="absolute inset-0">
         <div className="absolute w-72 h-72 bg-purple-400/30 rounded-full blur-xl top-10 left-10 animate-pulse"></div>
         <div className="absolute w-72 h-72 bg-blue-400/30 rounded-full blur-xl bottom-10 right-10 animate-pulse"></div>
@@ -156,13 +137,7 @@ const Signin = () => {
                 </span>
               </div>
 
-              {/* <button
-                  className="hover:underline cursor-pointer"
-                  onClick={handleForgetPassword}
-                  type="button"
-                >
-                  Forget password?
-                </button> */}
+            
               <Link
                 to={"/forget-password"}
                 state={{ email: emailRef.current?.value }}
@@ -175,14 +150,14 @@ const Signin = () => {
                 Login
               </button>
 
-              {/* Divider */}
+              
               <div className="flex items-center justify-center gap-2 my-2">
                 <div className="h-px w-16 bg-white/30"></div>
                 <span className="text-sm text-white/70">or</span>
                 <div className="h-px w-16 bg-white/30"></div>
               </div>
 
-              {/* Google Signin */}
+               
               <button
                 type="button"
                 onClick={handleGoogleSignin}
