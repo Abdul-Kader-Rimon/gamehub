@@ -1,23 +1,36 @@
-import React from 'react';
-import { Outlet } from 'react-router';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import React, { useContext } from "react";
+import { Outlet, useNavigation } from "react-router";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Loader from "../pages/Loader";
+import { AuthContext } from "../Provider/AuthContext";
 
 const MainLayout = () => {
-    return (
-        <>
-            <div className='flex flex-col min-h-screen'>
+    
+  const { loading } = useContext(AuthContext);
+  const navigation = useNavigation();
 
-            <Navbar/>
-            <main className='flex-1'>
-                <Outlet />
-            </main>
-                
-                
-            <Footer/>
-            </div>
-        </>
-    );
+  const isLoading = loading || navigation.state === "loading"
+     
+  return (
+    <div>
+      <div className="relative flex flex-col min-h-screen">
+        {isLoading && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80">
+            <Loader/>
+          </div>
+        )}
+        <Navbar />
+        
+        <main className="flex-1">
+            
+          <Outlet />
+        </main>
+
+        <Footer />
+      </div>
+    </div>
+  );
 };
 
 export default MainLayout;

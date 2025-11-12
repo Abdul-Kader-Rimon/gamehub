@@ -41,7 +41,8 @@ const AuthProvider = ({ children }) => {
   };
   const sendPassResetEmailFunc = (email) => {
      setLoading(true);
-    return sendPasswordResetEmail(auth, email);
+    return sendPasswordResetEmail(auth, email)
+     .finally(()=> setLoading(false))
   };
 
 

@@ -11,6 +11,9 @@ import UpdateProfile from "../pages/UpdateProfile";
 import GameDetails from "../pages/GameDetails";
 import OurTeam from "../pages/OurTeam";
 import OurMission from "../pages/OurMission";
+import ErrorPage from "../pages/ErrorPage";
+import ForgetPassword from "../pages/ForgetPassword";
+ 
 
 
 
@@ -80,6 +83,14 @@ export const router = createBrowserRouter([
         ),
         loader: () => fetch("/game.json"),
       },
+      {
+        path: "/forget-password",
+        element: <ForgetPassword/>
+      },
+      {
+        path: "*",
+        element: <ErrorPage/>
+      }
     ],
   },
 ]);
