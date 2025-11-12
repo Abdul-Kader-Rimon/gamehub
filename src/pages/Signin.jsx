@@ -121,22 +121,11 @@ const Signin = () => {
       </div>
 
       <MyContainer>
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-6 lg:p-10 text-white">
-          {/* Left section */}
-          <div className="max-w-lg text-center lg:text-left">
-            <h1 className="text-5xl font-extrabold drop-shadow-lg">
-              Welcome Back
-            </h1>
-            <p className="mt-4 text-lg text-white/80 leading-relaxed">
-              Sign in to continue your journey. Manage your account, explore new
-              features, and more.
-            </p>
-          </div>
-
-          {/* Login card */}
+        <div className="relative z-10 flex   items-center justify-center gap-10 p-6 lg:p-10 text-white">
+                
           <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
             <form onSubmit={handleSignin} className="space-y-5">
-              <h2 className="text-2xl font-semibold mb-2 text-center text-white">
+              <h2 className="text-4xl font-bold mb-2 text-center text-white">
                 Sign In
               </h2>
 
@@ -146,7 +135,7 @@ const Signin = () => {
                   type="email"
                   name="email"
                   ref={emailRef}
-                  placeholder="xyz@email.com"
+                  placeholder="Enter your Email"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
@@ -156,7 +145,7 @@ const Signin = () => {
                 <input
                   type={show ? "text" : "password"}
                   name="password"
-                  placeholder="••••••••"
+                  placeholder="Enter password"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
                 <span
@@ -177,12 +166,12 @@ const Signin = () => {
               <Link
                 to={"/forget-password"}
                 state={{ email: emailRef.current?.value }}
-                className="hover:underline cursor-pointer"
+                className="hover:underline cursor-pointer "
               >
                 Forget Password?
               </Link>
 
-              <button type="submit" className="my-btn">
+              <button type="submit" className="my-btn mt-2 font-bold">
                 Login
               </button>
 

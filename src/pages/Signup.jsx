@@ -178,7 +178,7 @@ const Signup = () => {
                 <input
                   type={show ? "text" : "password"}
                   name="password"
-                  placeholder="••••••••"
+                  placeholder="Enter your password"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
                 <span
