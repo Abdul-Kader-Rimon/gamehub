@@ -17,30 +17,35 @@ const MyProfile = () => {
     );
   }
   return (
-    <div className="w-1/3 mx-auto mt-4 border border-purple-500 p-4 rounded-lg">
-      <Helmet>
-        <title>My Profile - GemeHub</title>
-      </Helmet>
-      <MyContainer>
-        <div className="mx-auto text-center mt-10 space-y-4">
-          <img
-            className="w-32 h-32 rounded-full mx-auto shadow-lg"
-            src={user?.photoURL || "https://via.placeholder.com/150"}
-            alt=""
-          />
-          <h2 className="text-2xl font-semibold">{user?.displayName}</h2>
-          <p className="text-black">{user?.email}</p>
+    <div className="flex justify-center mt-10 px-4">
+      <div className="w-full sm:w-auto max-w-sm    border border-purple-400 rounded-lg shadow-lg my-4">
+        <h2 className="text-center font-bold text-3xl mt-4">My Profile</h2>
+        <Helmet>
+          <title>My Profile - GemeHub</title>
+        </Helmet>
+        <MyContainer>
+          <div className="flex flex-col items-center pb-8 px-6 pt-6">
+            <img
+              className="w-32 h-32 rounded-full mb-3 border-4 border-purple-400 shadow-lg"
+              src={user?.photoURL || "https://via.placeholder.com/150"}
+              alt=""
+            />
+            <h2 className="text-2xl font-semibold mb-1 text-black/80 text-center">
+              {user?.displayName}
+            </h2>
+            <p className="text-xl text-black/80 text-center">{user?.email}</p>
 
-          <div className="mt-6">
-            <button
-              onClick={() => navigate("/update-profile")}
-              className="bg-purple-600 text-white px-5 py-2 rounded-md hover:bg-purple-700 transition"
-            >
-              update
-            </button>
+            <div className="mt-4">
+              <button
+                onClick={() => navigate("/update-profile")}
+                className="bg-gradient-to-br from-blue-500 via-purple-500 to-purple-700 text-white px-4 py-2 rounded-md font-bold w-full"
+              >
+                update
+              </button>
+            </div>
           </div>
-        </div>
-      </MyContainer>
+        </MyContainer>
+      </div>
     </div>
   );
 };
