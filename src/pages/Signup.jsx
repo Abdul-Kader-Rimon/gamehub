@@ -135,20 +135,10 @@ const Signup = () => {
       </div>
 
       <MyContainer>
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-6 lg:p-10 text-white">
-          <div className="max-w-lg text-center lg:text-left">
-            <h1 className="text-5xl font-extrabold drop-shadow-lg">
-              Create Your Account
-            </h1>
-            <p className="mt-4 text-lg text-white/80 leading-relaxed">
-              Join our community and unlock exclusive features. Your journey
-              begins here!
-            </p>
-          </div>
-
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-10 p-6 lg:p-10 text-white">
           <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-center text-white">
-              Sign Up
+            <h2 className="text-4xl font-bold mb-6 text-center text-white">
+              Registration
             </h2>
 
             <form onSubmit={handleSignup} className="space-y-4">
@@ -157,7 +147,7 @@ const Signup = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Habib utsho"
+                  placeholder="Enter your Name"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
               </div>
@@ -176,7 +166,7 @@ const Signup = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="example@email.com"
+                  placeholder="Enter Your Email"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
               </div>
@@ -200,7 +190,7 @@ const Signup = () => {
               </div>
 
               <button type="submit" className="my-btn">
-                Sign Up
+                Registration
               </button>
               <button
                 type="button"
