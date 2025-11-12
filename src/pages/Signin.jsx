@@ -7,6 +7,7 @@ import { IoEyeOff } from "react-icons/io5";
 // import { auth } from "../firebase/firebase.config";
 import { toast } from "react-toastify";
 import { AuthContext } from "../Provider/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -81,8 +82,8 @@ const Signin = () => {
     signInWithEmailFunc( )
       .then((res) => {
         console.log(res.user);
-        setLoading(false);
         setUser(res.user);
+        setLoading(false);
         navigate(from,{replace: true});
         toast.success("SignIn Successful");
       })
@@ -110,6 +111,9 @@ const Signin = () => {
 
   return (
     <div className="min-h-[calc(100vh-20px)] flex items-center justify-center bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 relative overflow-hidden">
+      <Helmet>
+        <title>Sign in - GemeHub</title>
+      </Helmet>
       {/* Animated glow orbs */}
       <div className="absolute inset-0">
         <div className="absolute w-72 h-72 bg-purple-400/30 rounded-full blur-xl top-10 left-10 animate-pulse"></div>

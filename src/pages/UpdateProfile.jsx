@@ -5,6 +5,7 @@ import { updateProfile } from 'firebase/auth';
 import { auth } from '../firebase/firebase.config';
 import { toast } from 'react-toastify';
 import MyContainer from '../components/MyContainer';
+import { Helmet } from 'react-helmet-async';
 
 const UpdateProfile = () => {
     const { user, setUser } = useContext(AuthContext);
@@ -36,6 +37,9 @@ const UpdateProfile = () => {
       <div>
         <MyContainer>
           <div className="w-1/3 mx-auto mt-4 border border-purple-500 p-4 rounded-lg">
+            <Helmet>
+              <title>Update Profile - GemeHub</title>
+            </Helmet>
             <h2 className="text-2xl font-semibold text-center mb-6">
               Update Your Information
             </h2>

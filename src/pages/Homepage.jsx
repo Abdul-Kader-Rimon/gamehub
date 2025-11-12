@@ -4,6 +4,8 @@ import PopularGames from './PopularGames';
 import MyContainer from '../components/MyContainer';
 import Banner from './Banner';
 import Newsletter from './Newsletter';
+import { Helmet } from 'react-helmet-async';
+ 
 
 const Homepage = () => {
     const games = useLoaderData();
@@ -11,6 +13,9 @@ const Homepage = () => {
     console.log(games);
     return (
       <div>
+        <Helmet>
+          <title>Home - GemeHub</title>
+        </Helmet>
         <MyContainer>
           <Banner games={games} />
 

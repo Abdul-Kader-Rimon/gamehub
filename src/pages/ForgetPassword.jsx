@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthContext';
 import { toast } from 'react-toastify';
 import MyContainer from '../components/MyContainer';
+import { Helmet } from 'react-helmet-async';
 
 const ForgetPassword = () => {
     const location = useLocation();
@@ -20,7 +21,10 @@ const ForgetPassword = () => {
 
         sendPassResetEmailFunc(email)
             .then(() => {
-                toast.success("password reset email sent ")
+                toast.success("password reset email sent ");
+                setTimeout(() => {
+                    window.location.href = "https://mail.google.com/";
+                }, 1000)
             })
             .catch((error) => {
                 toast.error(error.message)
@@ -28,6 +32,9 @@ const ForgetPassword = () => {
     }
     return (
       <div>
+        <Helmet>
+          <title>Forget Password - GemeHub</title>
+        </Helmet>
         <MyContainer>
           <div>
             <div>

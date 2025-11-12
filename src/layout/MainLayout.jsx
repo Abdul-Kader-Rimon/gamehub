@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loader from "../pages/Loader";
 import { AuthContext } from "../Provider/AuthContext";
+import { HelmetProvider } from "react-helmet-async";
 
 const MainLayout = () => {
     
@@ -14,7 +15,8 @@ const MainLayout = () => {
      
   return (
     <div>
-      <div className="relative flex flex-col min-h-screen">
+      <HelmetProvider>
+         <div className="relative flex flex-col min-h-screen">
         {isLoading && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80">
             <Loader/>
@@ -29,6 +31,8 @@ const MainLayout = () => {
 
         <Footer />
       </div>
+       </HelmetProvider>
+     
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../Provider/AuthContext";
 import MyContainer from "../components/MyContainer";
 import { useNavigate } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const MyProfile = () => {
     const { user } = useContext(AuthContext);
@@ -17,6 +18,9 @@ const MyProfile = () => {
   }
   return (
     <div className="w-1/3 mx-auto mt-4 border border-purple-500 p-4 rounded-lg">
+      <Helmet>
+        <title>My Profile - GemeHub</title>
+      </Helmet>
       <MyContainer>
         <div className="mx-auto text-center mt-10 space-y-4">
           <img

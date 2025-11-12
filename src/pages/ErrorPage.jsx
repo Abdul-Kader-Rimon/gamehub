@@ -3,14 +3,17 @@ import errorImg from "../assets/error-404.png"
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 const ErrorPage = () => {
     return (
       <div>
-         
-        <div  >
+        <Helmet>
+          <title>Error - GemeHub</title>
+        </Helmet>
+
+        <div>
           <main className=" grid h-screen  place-items-center bg-gray-100 px-6 py-24 sm:py-32 lg:px-8 mb-5">
             <div className="text-center">
-               
               <img className="mx-auto" src={errorImg} alt="" />
               <h1 className="mt-4 text-5xl  font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
                 Oops, page not found!
@@ -24,7 +27,6 @@ const ErrorPage = () => {
             </div>
           </main>
         </div>
-         
       </div>
     );
 };

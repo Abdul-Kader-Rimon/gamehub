@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 
 import { FaEye } from "react-icons/fa";
 
@@ -14,6 +14,7 @@ import { auth } from "../firebase/firebase.config";
 import { toast } from "react-toastify";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
@@ -24,8 +25,29 @@ const Signup = () => {
     setLoading,
     signoutUserFunc,
     setUser,
+    signInWithEmailFunc,
   } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/"
+
+
+
+
+  const handleGoogleSignin = () => {
+    signInWithEmailFunc()
+      .then((res) => {
+        console.log(res.user);
+        setUser(res.user);
+        setLoading(false);
+        navigate(from, { replace: true });
+        toast.success("SignIn Successful");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.message);
+      });
+  };
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -104,7 +126,9 @@ const Signup = () => {
 
   return (
     <div className="min-h-[96vh] flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 relative overflow-hidden">
-       
+      <Helmet>
+        <title>Sign Up - GemeHub</title>
+      </Helmet>
       <div className="absolute inset-0">
         <div className="absolute w-72 h-72 bg-pink-400/30 rounded-full blur-2xl top-10 left-10 animate-pulse"></div>
         <div className="absolute w-72 h-72 bg-purple-400/30 rounded-full blur-2xl bottom-10 right-10 animate-pulse"></div>
@@ -180,7 +204,7 @@ const Signup = () => {
               </button>
               <button
                 type="button"
-                // onClick={handleGoogleSignin}
+                onClick={handleGoogleSignin}
                 className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
               >
                 <img
