@@ -20,7 +20,7 @@ const Games = () => {
             <div
               onClick={() => navigate(`/games/${game.id}`)}
               key={game.id}
-              className=" card bg-base-100   shadow-sm hover:scale-105 transition ease-in-out rounded-xl"
+              className=" card bg-base-100   shadow-sm hover:scale-105 transition duration-300 delay-150 ease-in-out rounded-xl"
             >
               <img src={game.coverPhoto} alt={game.title} />
 

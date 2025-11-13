@@ -16,7 +16,7 @@ const Homepage = () => {
         <Helmet>
           <title>Home - GemeHub</title>
         </Helmet>
-        <MyContainer>
+        <MyContainer className="space-y-4">
           <Banner games={games} />
 
           <PopularGames games={games} />
