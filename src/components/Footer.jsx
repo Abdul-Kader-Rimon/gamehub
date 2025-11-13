@@ -7,7 +7,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 const Footer = () => {
     return (
       <div>
-        <footer className=" footer sm:footer-horizontal flex justify-around items-center gap-10 bg-neutral text-neutral-content texcent p-10">
+        <footer className=" footer sm:footer-horizontal flex justify-around items-center gap-10 bg-purple-100 texcent p-10">
           <aside>
             <MyLink to={"/"}>
               <div className="flex items-center gap-2">
@@ -17,14 +17,16 @@ const Footer = () => {
                 </h2>
               </div>
             </MyLink>
-            <p>
+            <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-purple-500 to-purple-700">
               GAMEHUB Industries Ltd.
               <br />
               Copyright © 2025 - All right reserved by GAMEHUB Ltd
             </p>
           </aside>
           <nav>
-            <h4 className="footer-title ">Social</h4>
+            <h4 className="footer-title font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-purple-500 to-purple-700">
+              Social
+            </h4>
             <div className="grid grid-flow-col gap-4">
               <a href="https://www.facebook.com/">
                 <FaFacebook size={28} />
