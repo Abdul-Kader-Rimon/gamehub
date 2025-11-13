@@ -32,36 +32,31 @@ const Signup = () => {
   const handleGoogleSignin = () => {
     signInWithEmailFunc()
       .then((res) => {
-        console.log(res.user);
+        
         setUser(res.user);
         setLoading(false);
         navigate(from, { replace: true });
         toast.success("SignIn Successful");
       })
       .catch((error) => {
-        console.log(error);
+        
         toast.error(error.message);
       });
   };
 
   const handleSignup = (e) => {
     e.preventDefault();
-    console.log("sign up with fuction");
+    
     const displayName = e.target.name?.value;
     const photoURL = e.target.photo?.value;
     const email = e.target.email?.value;
     const password = e.target.password?.value;
 
-    console.log("sing up sunction ", {
-      displayName,
-      photoURL,
-      email,
-      password,
-    });
+   
 
     const regExp = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
-    console.log(regExp.test(password));
+     
 
     if (!regExp.test(password)) {
       toast.error(
@@ -75,11 +70,11 @@ const Signup = () => {
         updateProfileFunc(displayName, photoURL)
           .then(() => {
             sendEmailVerificationFunc().then((res) => {
-              console.log(res);
+               
               setLoading(false);
               
               signoutUserFunc().then((res) => {
-                console.log(res);
+                 
                toast.success(
                  "Signup Successfully . Check your email to Verification your account"
                );
@@ -93,7 +88,7 @@ const Signup = () => {
           });
       })
       .catch((error) => {
-        console.log(error);
+        
 
         if (error.code === "auth/email-already-in-use") {
           toast.error("User already exists in the database.");

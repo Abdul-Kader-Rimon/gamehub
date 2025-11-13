@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 const Homepage = () => {
     const games = useLoaderData();
 
-    console.log(games);
+    
     return (
       <div>
         <Helmet>

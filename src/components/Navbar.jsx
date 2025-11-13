@@ -19,12 +19,12 @@ const Navbar = () => {
     const handleSignout = () => { 
       signoutUserFunc()
         .then((res) => {
-          console.log(res);
+           
           toast.success("SignOut Successful");
           setUser(null);
         })
         .catch((error) => {
-          console.log(error);
+           
           toast.error(error.message);
         });
     };

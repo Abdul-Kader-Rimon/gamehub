@@ -46,7 +46,7 @@ const Signin = () => {
    
     const regExp = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
-    console.log(regExp.test(password));
+    
 
     if (!regExp.test(password)) {
       toast.error(
@@ -56,7 +56,7 @@ const Signin = () => {
     }
     signInWithEmailAndPasswordFunc(email, password)
       .then((res) => {
-        console.log(res);
+         
         setLoading(false);
         if (!res.user?.emailVerified) {
           toast.error("Your Email is not verified");
@@ -67,7 +67,7 @@ const Signin = () => {
         navigate(from,{replace: true})
       })
       .catch((error) => {
-        console.log(error);
+         
         toast.error(error.message);
       });
   };
@@ -75,14 +75,14 @@ const Signin = () => {
     const handleGoogleSignin = () => {
     signInWithEmailFunc( )
       .then((res) => {
-        console.log(res.user);
+        
         setUser(res.user);
         setLoading(false);
         navigate(from,{replace: true});
         toast.success("SignIn Successful");
       })
       .catch((error) => {
-        console.log(error);
+        
         toast.error(error.message);
       });
   };
