@@ -1,16 +1,67 @@
-# React + Vite
+## Project Name : GAMEHUB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ ## Live Link :: https://game-hub-19833.web.app/
 
-Currently, two official plugins are available:
+## Purpose: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Gamehub is a dynamic and engaging online platform created to connect gamers with indie game developers. It allows users to discover, explore, and interact with a curated library of games, providing detailed insights into each title and seamless access to downloads or installations. Designed with a modern, user-friendly interface, Gamehub emphasizes accessibility, responsiveness, and an immersive browsing experience that keeps users engaged while supporting independent game creators.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ ## Key Features:
+Dynamic Navbar:
+Logo on the left, navigation links on the right.
 
-## Expanding the ESLint configuration
+Login/Register links shown when logged out.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+User profile picture and logout button shown when logged in.
+
+Profile picture links to the My Profile page.
+
+Homepage: 
+Banner slider with 4+ game images.
+Popular games section (at least 3 top-rated games displayed in cards).
+Newsletter subscription section
+
+Protected Game Details Page:
+Accessible only to logged-in users, displaying all game details from JSON data
+
+Authentication:
+Email/password login and registration.
+
+Google login integration.
+
+Password validation: min 6 characters, uppercase & lowercase letters required.
+
+Forgot password feature with pre-filled email and Gmail redirect.
+
+User Profile Management: Update photo URL and name.
+
+Additional Features:
+
+404 Not Found page.
+
+Additional thematic route.
+
+Dynamic page titles.
+
+Responsive Design: Fully optimized for mobile, tablet, and desktop devices.
+
+
+## Dependencies:
+react
+
+react-router
+
+react-icons
+
+react-helmet-async
+
+react-toastify
+
+react-spinners
+
+firebase
+
+tailwindcss
+
+daisyui , etc
