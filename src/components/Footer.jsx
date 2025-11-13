@@ -27,7 +27,7 @@ const Footer = () => {
             <h4 className="footer-title font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-purple-500 to-purple-700">
               Social
             </h4>
-            <div className="grid grid-flow-col gap-4">
+            <div className="grid grid-flow-row md:grid-flow-col gap-4">
               <a href="https://www.facebook.com/">
                 <FaFacebook size={28} />
               </a>
