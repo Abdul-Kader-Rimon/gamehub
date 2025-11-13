@@ -36,32 +36,36 @@ const ForgetPassword = () => {
           <title>Forget Password - GemeHub</title>
         </Helmet>
         <MyContainer>
-          <div>
+          <div className="w-full max-w-md  mx-auto mt-6  sm:p-8 shadow-lg bg-white/5 border border-purple-500 p-4 rounded-lg ">
             <div>
-              <h2>Reset Password</h2>
+              <h2 className="text-center font-bold text-5xl mb-10">
+                Reset Password
+              </h2>
               <form onSubmit={handleReset}>
-                <label className="block text-sm mb-1">Email</label>
+                <label className="block text-lg font-semibold mb-1">
+                  Email
+                </label>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your Email"
-                  className="input input-bordered w-full bg-white/20   placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="input input-bordered border border-purple-400 w-full bg-white/20 text-purple-600   focus:outline-none focus:ring-2 focus:ring-purple-400 mb-3 hover:scale-105 transition duration-300 delay-150"
                 />
 
                 <button
                   type="submit"
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition-all"
+                  className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold  w-full mb-3 hover:scale-105 transition duration-300 delay-150"
                 >
                   Reset Password
                 </button>
               </form>
-              <p
+              <button
                 onClick={() => navigate("/signin")}
-                className="text-center text-sm mt-4 text-gray-300 hover:underline cursor-pointer"
+                className="bg-gradient-to-br  from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold  w-full mb-2 hover:scale-105 transition duration-300 delay-150"
               >
                 Back To Login
-              </p>
+              </button>
             </div>
           </div>
         </MyContainer>

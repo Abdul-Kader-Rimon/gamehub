@@ -34,7 +34,7 @@ const OurTeam = () => {
                 isn’t just entertainment, it’s a way of life.
               </p>
               <Link to={"/"}>
-                <button className="btn  bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold ">
+                <button className="btn  bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold hover:scale-105 transition duration-300 delay-150">
                   Go Home
                 </button>
               </Link>

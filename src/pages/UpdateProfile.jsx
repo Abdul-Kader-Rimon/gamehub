@@ -53,7 +53,7 @@ const UpdateProfile = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter Your Name"
-                  className="input input-bordered w-full bg-white/20 text-purple-500 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                  className="input input-bordered w-full bg-white/20 text-purple-500 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:scale-105 transition duration-300 delay-150"
                 />
               </div>
               <div>
@@ -63,13 +63,13 @@ const UpdateProfile = () => {
                   value={photoURL}
                   onChange={(e) => setPhotoURL(e.target.value)}
                   placeholder="Your photo URL here"
-                  className="input input-bordered w-full bg-white/20 text-purple-500 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                  className="input input-bordered w-full bg-white/20 text-purple-500 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:scale-105 transition duration-300 delay-150"
                 />
               </div>
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold "
+                  className="bg-gradient-to-br from-blue-500 via-purple-600 to-purple-700 text-white px-4 py-2 rounded-md font-bold hover:scale-105 transition duration-300 delay-150 "
                 >
                   update Information
                 </button>
